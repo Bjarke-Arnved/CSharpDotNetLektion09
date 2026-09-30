@@ -1,0 +1,40 @@
+﻿@page "/Todo"
+@using TodoBlazor.Models
+<h3>Todo</h3>
+
+<ul class="list-group">
+    @foreach (var todo in todos)
+    {
+        <li class="list-group-item">
+            <input type="checkbox" @bind="todo.IsDone" disabled="@todo.IsDone"/>
+            <span class="@(todo.IsDone ? "text-decoration-line-through" : "")">@todo.Description</span>
+        </li>
+    }
+</ul>
+
+<h3>Opret ny todo</h3>
+<form class="mb-3">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Something todo" @bind="newTodo"/>
+        <button class="btn btn-primary" type="button" @onclick="AddTodo">+</button>
+    </div>
+</form>
+
+@code {
+    private List<TodoItem> todos = new();
+    private string newTodo = string.Empty;
+
+    private void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem { Description = newTodo, IsDone = false });
+            newTodo = string.Empty;
+        }
+    }
+    
+    private void UpdateTodo()
+    {
+        Console.WriteLine("Todo updated");
+    }
+}

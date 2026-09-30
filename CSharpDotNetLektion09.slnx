@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Examples/">
+    <Project Path="TodoBlazor/TodoBlazor.csproj" />
+  </Folder>
+  <Folder Name="/Slides/">
+    <File Path="Slides/Blazor_WebAssembly.md" />
+  </Folder>
+</Solution>
