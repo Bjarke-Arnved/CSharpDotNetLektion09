@@ -102,7 +102,7 @@ style: |
 7. **Komponent Livscyklus** — `OnInitialized`, `OnParametersSet`, osv.
 8. **REST API Integration** — `HttpClient` & Asynkront data-hentning
 9. **State Management & JS Interop** — Tilstand og JavaScript integration
-10. **.NET 8/9 Render Modes & Best Practices** — Optimering og sikkerhed
+10. **.NET 8/9 Render Modes & Best Practices** — Sikkerhed og anbefalinger
 
 ---
 
@@ -314,8 +314,8 @@ Blazor understøtter både **1-vejs** og **2-vejs** databinding samt event-hånd
 
 ### 📥 Data Binding
 * **1-vejs binding**: `@variable` viser værdien i HTML.
-* **2-vejs binding**: `@bind-value="searchText"` opdaterer C# variabel når feltet ændres.
-* **Event binding**: `@bind-value:event="oninput"` giver øjeblikkelig opdatering ved indtastning.
+* **2-vejs binding**: `@bind="searchText"` opdaterer C# variabel når feltet ændres.
+* **Event binding**: `@bind:event="oninput"` giver øjeblikkelig opdatering ved indtastning.
 
 </div>
 <div class="card">
@@ -559,32 +559,7 @@ public static Task<string> GetHelloMessage() {
 
 ---
 
-## ⚡ 16. Ydeevne & Optimeringsstrategier
-
-For at få den bedste ydeevne ud af Blazor WebAssembly:
-
-<div class="grid-2">
-<div class="card">
-
-### 🚀 AOT (Ahead-Of-Time) Compilation
-* **JIT (Default)**: .NET IL-kode fortolkes runtime i WASM.
-* **AOT Compilation**: Kompilerer C# direkte til native WebAssembly binærkode under build.
-* **Resultat**: Op til **3x-5x hurtigere** beregninger! *(Men giver større download-størrelse)*.
-
-</div>
-<div class="card">
-
-### 📦 Trimming & Compression
-* **IL Trimming**: Fjerner ubrugt .NET kode fra DLL'erne ved publish.
-* **Brotli / Gzip**: Komprimerer filer før de sendes til browseren.
-* **Lazy Loading**: Hent kun assemblies for specifikke ruter, når brugeren besøger dem.
-
-</div>
-</div>
-
----
-
-## 🔒 17. Sikkerhed i Blazor WebAssembly
+## 🔒 16. Sikkerhed i Blazor WebAssembly
 
 > [!CAUTION]
 > **Husk**: Alt hvad der sendes til Blazor WebAssembly (DLL'er, kode, konfiguration) ligger på brugerens computer!
@@ -610,7 +585,7 @@ For at få den bedste ydeevne ud af Blazor WebAssembly:
 
 ---
 
-## 🎯 18. Hvornår skal man vælge Blazor WASM?
+## 🎯 17. Hvornår skal man vælge Blazor WASM?
 
 <div class="grid-2">
 <div class="card">
@@ -634,7 +609,7 @@ For at få den bedste ydeevne ud af Blazor WebAssembly:
 
 ---
 
-## 🏁 19. Opsummering
+## 🏁 18. Opsummering
 
 <div class="card">
 
