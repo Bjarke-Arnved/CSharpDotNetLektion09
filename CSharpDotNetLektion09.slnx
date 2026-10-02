@@ -8,4 +8,5 @@
   <Folder Name="/Slides/">
     <File Path="Slides/Blazor_WebAssembly.md" />
   </Folder>
+  <Project Path="ConnectFour/ConnectFour.csproj" />
 </Solution>
