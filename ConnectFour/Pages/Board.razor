@@ -1,4 +1,5 @@
 ﻿<HeadContent>
+
         <style>
                 :root {
                         --board-bg: yellow;
@@ -18,5 +19,9 @@
     </div>
 </div>
 @code {
-
+    Model.State state = new();   
+    void OnInitialized()
+    {
+        state.ResetGame();
+    }
 }
